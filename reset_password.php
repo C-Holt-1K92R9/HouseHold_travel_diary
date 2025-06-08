@@ -60,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $mail->Port       = port; // TCP port
 
                 // Recipients
-                $mail->setFrom('hisctgs@gmail.com', 'HIS-CTG Support');
+                $mail->setFrom('mail here', '');
                 $mail->addAddress($email); // Add recipient's email
 
                 // Email content
