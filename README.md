@@ -23,4 +23,4 @@ The web-based survey form is designed to have an optimal performance throughout 
 
 * We are collecting data on travel patterns and household demographics through brief interviews with residents. This information will be used to develop and compare different models for predicting travel behavior in Chattogram, which can help city planners improve transportation systems.
 
-Personal comment: My First official project that was utilized for a research research. Doing this project, I learned a lot aboout web development. Huge thanks to *"Kamol Debnath Dip*, *Lecturer of CUET"*.
+**Personal comment:** My First official project that was utilized for a research research. Doing this project, I learned a lot aboout web development. Huge thanks to *"Kamol Debnath Dip*, *Lecturer of CUET"*.
