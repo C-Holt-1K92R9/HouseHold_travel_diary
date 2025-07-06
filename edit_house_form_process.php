@@ -22,12 +22,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         else{
             ${"q" . $i} = $_POST["q" . $i];}
         }
+        $q1_1 = $_POST["q1_1"];
+        $q1_2 = $_POST["q1_2"];
 
         $house_id=$_POST['house_id'];
         $q22_1=$_POST['q22_1'];
             // Updating data in "aggriment" table.
 $conn->query("UPDATE aggriment 
-SET Q1 = '$q1', 
+SET Q1 = '$q1',
+    Q1_1 = '$q1_1',
+    Q1_2 = '$q1_2',
     Q2 = '$q2' 
 WHERE house_id = '$house_id'")
 or die($conn->error);

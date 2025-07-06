@@ -22,7 +22,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         else{
             ${"q" . $i} = $_POST["q" . $i];}
         }
-
+        $q1_1 = $_POST["q1_1"];
+        $q1_2 = $_POST["q1_2"];
         // creating house_id
         date_default_timezone_set('Asia/Dhaka');
 
@@ -56,8 +57,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $house_id = $surveyer_id . "-" . $current_date . "-" . $serial;
         $serial_id=$surveyer_id . "-" . $serial_date . "-" . $serial;
         //Inserting data into "aggriment" table
-        $conn->query( "INSERT INTO aggriment (house_id, Q1, Q2) 
-                           VALUES ('$house_id', '$q1', '$q2')");
+        $conn->query( "INSERT INTO aggriment (house_id, Q1, Q1_1, Q1_2, Q2) 
+                           VALUES ('$house_id', '$q1','$q1_1','$q1_2' '$q2')");
 
         //Inserting  data into "household_info" table.
         $conn->query( "INSERT INTO household_info (house_id, serial_id, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10) 

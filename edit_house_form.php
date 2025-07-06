@@ -210,25 +210,148 @@ list($latitude, $longitude) = array_map('trim', explode(',', $house['Q4']));
         <div class="section active" id="section1">
         <h1>Agreement</h1>
         <input type="hidden" name="house_id" value="<?= $house_id ?>">
+        <div class="section active" id="section1">
+        <h1>Agreement</h1>
+        <div class="Q">
+            <div id="survey-information" style="font-family: Arial, sans-serif; color: #ffff;">
+
+    <h2>📝Household Travel Survey - Participant Information and Consent</h2>
+
+    <p>
+        The survey is conducted for the M.Sc Thesis titled <strong><em>"A COMPARATIVE ANALYSIS OF TRADITIONAL AND ADVANCED PREDICTIVE APPROACHES FOR MODELING URBAN MOBILITY IN CHATTOGRAM."</em></strong> by Kamol Debnath Dip, M.Sc. student, CE, Bangladesh University of Engineering & Technology.
+    </p>
+    <p>
+        The research aims to understand how people in Chattogram travel within the city and how different models perform in predicting travel behavior. We are collecting data on travel patterns and household demographics through brief interviews with residents. This information will be used to develop and compare different models for predicting travel behavior in Chattogram, which can help city planners improve transportation systems.
+    </p>
+
+    <hr>
+
+    <h3>🔷What will you be asked to do?</h3>
+    <p>
+        A trained surveyor will help you complete a questionnaire using a mobile device. You'll be asked questions about:
+    </p>
+    <ul>
+        <li>Your <strong>age, gender, education,</strong> and <strong>occupation</strong></li>
+        <li><strong>Household information</strong> like income, housing type, ownership, and home location using a map</li>
+        <li><strong>Vehicle information</strong> like vehicle type, fuel type, make model and buying date</li>
+        <li><strong>Trips made yesterday</strong> by you and members of your household (including children), such as:
+            <ul>
+                <li>Where each trip started and ended (using an interactive map)</li>
+                <li>When the trip happened</li>
+                <li>What transportation modes were used and alternatives</li>
+                <li>Trip purpose, cost, and how many people went along</li>
+            </ul>
+        </li>
+    </ul>
+    <p>
+        The survey will take about <strong>40-50 minutes</strong>.
+    </p>
+
+    <hr>
+
+    <h3>🔷Are children included?</h3>
+    <p>
+        Yes. If a child (under 18) in your household made a trip yesterday, we may ask you to provide some basic travel details for them. If your child is aged <strong>  8 or older </strong>, we also request that you briefly explain the survey to them and ask for their agreement to participate.
+    </p>
+
+    <hr>
+
+    <h3>🔷Risks and Benefits</h3>
+    <h4><strong>Risks:</strong></h4>
+    <p>
+        There are <strong>no known physical, psychological, or legal risks</strong> involved in this survey. The questions are about regular daily activities and do not require sharing sensitive or personal identifiers.
+    </p>
+    <h4><strong>Benefits:</strong></h4>
+    <p>
+        Although you will not receive direct benefits, your participation will help improve local transportation planning and services. The data may support more efficient public transit systems, safer roads, and better travel options in your community.
+    </p>
+
+    <hr>
+
+    <h3>🔷Will your data be safe?</h3>
+    <p>
+        Yes. All information you provide will be kept <strong>confidential</strong> and used only for research purposes.
+    </p>
+    <ul>
+        <li>Your responses will be stored securely.</li>
+        <li>No names or personal identifiers will appear in any reports or publications.</li>
+        <li>Location data (like GPS coordinates) will only be used for producing aggregate data summary and will not be linked to individual identities.</li>
+    </ul>
+
+    <hr>
+
+    <h3>🔷Is participation voluntary?</h3>
+    <p>
+        Yes. You can <strong>choose not to participate,</strong> skip any question, or stop the survey at any time without any problem.
+    </p>
+    
+    <hr>
+    
+    <h3>🔷Whom to contact?</h3>
+    <p>
+        If you have any questions, please do not hesitate to contact the research team.
+    </p>
+    <p>
+        <strong>Dr. Annesha Enam, Associate Professor</strong><br>
+        Department of Civil Engineering, BUET<br>
+        Mobile: <a href="tel:+8801730715209" style="color:skyblue;">01730715209</a>; Email: <a href="mailto:annesha@ce.buet.ac.bd" style="color:skyblue;">annesha@ce.buet.ac.bd</a>
+    </p>
+    <p>
+        <strong>Kamol Debnath Dip, M.Sc. Student</strong><br>
+        Department of Civil Engineering, BUET<br>
+        Mobile: <a href="tel:+8801521301787" style="color:skyblue;">01521301787</a>; Email: 
+        <a href="mailto:kamoldebnathdip@gmail.com" style="color:skyblue;">kamoldebnathdip@gmail.com</a> 
+        or 
+        <a href="mailto:0421042407@ce.buet.ac.bd" style="color:skyblue;">0421042407@ce.buet.ac.bd</a>
+    </p>
+
+</div>
+        </div>
         <!-- Q1 -->
         <div class="Q">
-        <div class="radio-input">
-            <p><span class="q_no">Q1: </span>Do you agree to help us in research by providing some information about your household travel diaries? 
-                [ আপনি কি আপনার গৃহস্থালিসংক্রান্ত যাত্রাবিবরনির কিছু তথ্য দিয়ে গবেষনায় সাহায্য করতে রাজি আছেন? ] <span class="must">*</span> <br> </p>
-            
-            
-                <label class="label">
-                  <input type="radio" name="q1" value="Yes" <?= $aggr['Q1'] === 'Yes' ? 'checked' : '' ?> required>
-                  <p class="text">Yes</p>
-                </label>
-                <label class="label">
-                  <input type="radio" name="q1" value="No" <?= $aggr['Q1'] === 'No' ? 'checked' : '' ?> required>
-                  <p class="text">No</p>
-                </label>
-
-              </div>
+            <div class="radio-input">
+                <p><span class="q_no"><strong>Q1: Consent to participate (adult) </strong></span><br><br>I confirm that I have read and understood the information about this travel survey. I voluntarily 
+                            agree to participate and provide information about my own travel behavior.<span class="must">*</span> <br> </p>
+                    <label class="label">
+                    <input type="radio" name="q1" id="q1" value="I agree" <?= $house['Q1'] === 'I agree' ? 'checked' : '' ?> required>
+                    <p class="text">I agree</p>
+            </div>
               
-            </div>    
+        </div>
+         
+        <div class="Q">
+            <div class="radio-input">
+                <p><span class="q_no"><strong>Q1.1: Parental consent (for child participation) </strong></span><br><br>If you are a parent/guardian, please confirm: 
+                                    I understand that travel information about my child(ren) may be collected through me, 
+                                    and I give permission for their participation in this study.<span class="must">*</span> <br> </p>
+                    <label class="label">
+                    <input type="radio" name="q1_1" value="I give consent for my child(ren)'s participation" <?= $house['Q1_1'] === "I give consent for my child(ren)'s participation" ? 'checked' : '' ?> required>
+                    <p class="text"> I give consent for my child(ren)'s participation</p>
+            </label>
+            <label class="label">
+                    <input type="radio" name="q1_1" value="Not Applicable (If no minor is involved)" <?= $house['Q1_1'] === 'Not Applicable (If no minor is involved)' ? 'checked' : '' ?> required>
+                    <p class="text">Not Applicable (If no minor is involved)</p>
+                </label>
+            </div>
+              
+        </div>
+        
+        <div class="Q">
+            <div class="radio-input">
+                <p><span class="q_no"><strong>Q1.2: Child assent (for age-appropriate children)  </strong></span><br><br>If your child is old enough to understand (e.g., 8–17), please confirm this assent with them: 
+                                    “Do you agree to let us ask about your travel yesterday for our research?” 
+                                    If they say yes, please confirm below: <span class="must">*</span> <br> </p>
+                    <label class="label">
+                    <input type="radio" name="q1_2" value="My child gives their assent to participate" <?= $house['Q1_2'] === "My child gives their assent to participate" ? 'checked' : '' ?> required>
+                    <p class="text">My child gives their assent to participate </p>
+            </label>
+            <label class="label">
+                    <input type="radio" name="q1_2" value="Not Applicable (If no minor is involved)" <?= $house['Q1_2'] === "Not Applicable (If no minor is involved)" ? 'checked' : '' ?> required>
+                    <p class="text">Not Applicable (If no minor is involved) </p>
+                </label>
+            </div>
+              
+        </div>  
         <!-- Q2 -->
         <div class="Q">
         <p><span class="q_no">Q2: </span>Your Mobile Number if you want to attend lucky draw. </p>

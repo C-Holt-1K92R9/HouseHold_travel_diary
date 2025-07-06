@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <footer style='text-align: center; padding: 20px; background-color: #f7f7f7;'>
                     <p style='font-size: 12px;'>Best regards,</p>
                     <p style='font-size: 12px;'>The HIS-CTG Team</p>
-                    <p style='font-size: 12px;'>For support, contact <a href='mailto:hisctgs@gmail.com' style='color: #4CAF50;'>hisctgs@gmail.com</a></p>
+                    <p style='font-size: 12px;'>For support, contact <a href='mailto: ' style='color: #4CAF50;'> </a></p>
                 </footer>
             </body>
             </html>
@@ -54,13 +54,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $mail->isSMTP();
                 $mail->Host       = 'smtp.gmail.com';
                 $mail->SMTPAuth   = true;
-                $mail->Username   = 'hisctgs@gmail.com'; // Your SMTP username
-                $mail->Password   = 'kcxl vlpl mpce wolz'; // Your SMTP password
+                $mail->Username   = ''; // Your SMTP username
+                $mail->Password   = ''; // Your SMTP password
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                 $mail->Port       = 587; // TCP port
 
                 // Recipients
-                $mail->setFrom('hisctgs@gmail.com', 'HIS-CTG Support');
+                $mail->setFrom('', 'HIS-CTG Support');
                 $mail->addAddress($email); // Add recipient's email
 
                 // Email content
