@@ -54,13 +54,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $mail->isSMTP();
                 $mail->Host       = 'smtp.gmail.com';
                 $mail->SMTPAuth   = true;
-                $mail->Username   = ''; // Your SMTP username
-                $mail->Password   = ''; // Your SMTP password
+                $mail->Username   = 'hisctgs@gmail.com'; // Your SMTP username
+                $mail->Password   = 'kcxl vlpl mpce wolz'; // Your SMTP password
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-                $mail->Port       = 587; // TCP port
+                $mail->Port       = port; // TCP port
 
                 // Recipients
-                $mail->setFrom('', 'HIS-CTG Support');
+                $mail->setFrom('hisctgs@gmail.com', 'HIS-CTG Support');
                 $mail->addAddress($email); // Add recipient's email
 
                 // Email content
